@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayumi Ads & Prints - Custom Printing Services</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #1a1a1a 0%, #000000 100%);
+        }
+        .service-card {
+            transition: all 0.3s ease;
+        }
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+        }
+        .floating-animation {
+            animation: float 6s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+        }
+        .fade-in {
+            animation: fadeIn 1s ease-in;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-gray-50">
+    <!-- Header -->
+    <header class="gradient-bg shadow-lg sticky top-0 z-50">
+        <nav class="max-w-7xl mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-3">
+                    <img src="https://ik.imagekit.io/dxnelsw4w/your-logo.png.png?updatedAt=" alt="Ayumi Ads & Prints Logo" class="h-32 object-contain">
+                    <div class="text-white">
+                        <h1 class="text-xl font-bold">Ayumi Ads & Prints</h1>
+                    </div>
+                </div>
+                <div class="hidden md:flex space-x-8 text-white">
+                    <a href="#services" class="hover:text-blue-200 transition-colors font-medium">Services</a>
+                    <a href="#gallery" class="hover:text-blue-200 transition-colors font-medium">Gallery</a>
+                    <a href="#contact" class="hover:text-blue-200 transition-colors font-medium">Contact</a>
+                </div>
+                <div class="md:hidden">
+                    <button class="text-white" onclick="toggleMenu()">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="gradient-bg py-20 px-4">
+        <div class="max-w-6xl mx-auto text-center">
+            <h2 class="text-5xl md:text-6xl font-bold text-white mb-6 floating-animation">
+                Your Vision, Our Print
+            </h2>
+            <p class="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+                Professional custom printing services for all your business and personal needs. From t-shirts to signages, we bring your ideas to life with quality and creativity.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#services" class="bg-white text-blue-600 px-8 py-4 rounded-full font-semibold hover:bg-blue-50 transition-colors">
+                    View Our Services
+                </a>
+                <a href="#contact" class="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-blue-600 transition-colors">
+                    Get Quote
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 px-4 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Our Services</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    Complete printing and customization solutions for businesses and individuals
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+                <!-- Service Cards -->
+                <div class="service-card bg-gradient-to-br from-blue-50 to-cyan-50 p-6 rounded-2xl border border-blue-100">
+                    <div class="text-blue-600 mb-4">
+                        <svg class="w-12 h-12" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M7 3a1 1 0 000 2h6a1 1 0 100-2H7zM4 7a1 1 0 011-1h10a1 1 0 110 2H5a1 1 0 01-1-1zM2 11a2 2 0 012-2h12a2 2 0 012 2v4a2 2 0 01-2 2H4a2 2 0 01-2-2v-4z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">T-shirt Sublimation</h3>
+                    <p class="text-gray-600">High-quality custom t-shirt printing with vibrant colors and durable designs</p>
+                </div>
+
+                <div class="service-card bg-gradient-to-br from-green-50 to-blue-50 p-6 rounded-2xl border border-blue-100">
+                    <div class="text-blue-600 mb-4">
+                        <svg class="w-12 h-12" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clip-rule="evenodd"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Signages & Tarpaulin</h3>
+                    <p class="text-gray-600">Eye-catching signages and durable tarpaulin printing for your business</p>
+                </div>
+
+                <div class="service-card bg-gradient-to-br from-yellow-50 to-orange-50 p-6 rounded-2xl border border-orange-100">
+                    <div class="text-orange-600 mb-4">
+                        <svg class="w-12 h-12" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M4 4a2 2 0 00-2 2v1h16V6a2 2 0 00-2-2H4zM18 9H2v5a2 2 0 002 2h12a2 2 0 002-2V9zM4 13a1 1 0 011-1h1a1 1 0 110 2H5a1 1 0 01-1-1zm5-1a1 1 0 100 2h1a1 1 0 100-2H9z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Business Cards & IDs</h3>
+                    <p class="text-gray-600">Professional business cards, PVC IDs, and name tags for your organization</p>
+                </div>
+
+                <div class="service-card bg-gradient-to-br from-pink-50 to-red-50 p-6 rounded-2xl border border-red-100">
+                    <div class="text-red-600 mb-4">
+                        <svg class="w-12 h-12" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"></path>
+                            <path fill-rule="evenodd" d="M4 5a2 2 0 012-2v1a2 2 0 002 2h8a2 2 0 002-2V3a2 2 0 012 2v6a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3z" clip-rule="evenodd"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Event Souvenirs</h3>
+                    <p class="text-gray-600">Custom souvenirs, party favors, and personalized items for special occasions</p>
+                </div>
+
+                <div class="service-card bg-gradient-to-br from-indigo-50 to-purple-50 p-6 rounded-2xl border border-indigo-100">
+                    <div class="text-indigo-600 mb-4">
+                        <svg class="w-12 h-12" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M4 2a1 1 0 011 1v2.101a7.002 7.002 0 0111.601 2.566 1 1 0 11-1.885.666A5.002 5.002 0 005.999 7H9a1 1 0 010 2H4a1 1 0 01-1-1V3a1 1 0 011-1zm.008 9.057a1 1 0 011.276.61A5.002 5.002 0 0014.001 13H11a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0v-2.101a7.002 7.002 0 01-11.601-2.566 1 1 0 01.61-1.276z" clip-rule="evenodd"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Design Services</h3>
+                    <p class="text-gray-600">Advertisement design, layout creation, and custom graphic design solutions</p>
+                </div>
+
+                <div class="service-card bg-gradient-to-br from-teal-50 to-green-50 p-6 rounded-2xl border border-teal-100">
+                    <div class="text-teal-600 mb-4">
+                        <svg class="w-12 h-12" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M6 2a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V4a2 2 0 00-2-2H6zm1 2a1 1 0 000 2h6a1 1 0 100-2H7zm6 7a1 1 0 011 1v3a1 1 0 11-2 0v-3a1 1 0 011-1zm-3 3a1 1 0 100 2h.01a1 1 0 100-2H10zm-4 1a1 1 0 011-1h.01a1 1 0 110 2H7a1 1 0 01-1-1zm1-4a1 1 0 100 2h.01a1 1 0 100-2H7zm2 0a1 1 0 100 2h.01a1 1 0 100-2H9zm2 0a1 1 0 100 2h.01a1 1 0 100-2H11z" clip-rule="evenodd"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Custom Stationery</h3>
+                    <p class="text-gray-600">Notebooks, binders, flyers, invitations, and all your printing needs</p>
+                </div>
+            </div>
+
+            <!-- Complete Services List -->
+            <div class="bg-gray-50 rounded-3xl p-8">
+                <h3 class="text-2xl font-bold text-gray-800 mb-8 text-center">Complete Services List</h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <div class="flex items-center space-x-3 text-gray-700">
+                        <span class="text-green-500 font-bold">✓</span>
+                        <span>T-shirt Sublimation and more!</span>
+                    </div>
+                    <div class="flex items-center space-x-3 text-gray-700">
+                        <span class="text-green-500 font-bold">✓</span>
+                        <span>Signages</span>
+                    </div>
+                    <div class="flex items-center space-x-3 text-gray-700">
+                        <span class="text-green-500 font-bold">✓</span>
+                        <span>Tarpaulin Printing</span>
+                    </div>
+                    <div class="flex items-center space-x-3 text-gray-700">
+                        <span class="text-green-500 font-bold">✓</span>
+                        <span>Name Tags</span>
+                    </div>
+                    <div class="flex items-center space-x-3 text-gray-700">
+                        <span class="text-green-500 font-bold">✓</span>
+                        <span>Tracing Pads/Customized Notebooks</span>
+                    </div>
+                    <div class="flex items-center space-x-3 text-gray-700">
+                        <span class="text-green-500 font-bold">✓</span>
+                        <span>Customized Binder</span>
+                    </div>
+                    <div class="flex items-center space-x-3 text-gray-700">
+                        <span class="text-green-500 font-bold">✓</span>
+                        <span>Product Label Stickers</span>
+                    </div>
+                    <div class="flex items-center space-x-3 text-gray-700">
+                        <span class="text-green-500 font-bold">✓</span>
+                        <span>Business Cards/Thank You Cards</span>
+                    </div>
+                    <div class="flex items-center space-x-3 text-gray-700">
+                        <span class="text-green-500 font-bold">✓</span>
+                        <span>Any Invitations</span>
+                    </div>
+                    <div class="flex items-center space-x-3 text-gray-700">
+                        <span class="text-green-500 font-bold">✓</span>
+                        <span>Event Souvenirs</span>
+                    </div>
+                    <div class="flex items-center space-x-3 text-gray-700">
+                        <span class="text-green-500 font-bold">✓</span>
+                        <span>Tote Bags and Pouches</span>
+                    </div>
+                    <div class="flex items-center space-x-3 text-gray-700">
+                        <span class="text-green-500 font-bold">✓</span>
+                        <span>Advertisement and Layout Design</span>
+                    </div>
+                    <div class="flex items-center space-x-3 text-gray-700">
+                        <span class="text-green-500 font-bold">✓</span>
+                        <span>Photocards</span>
+                    </div>
+                    <div class="flex items-center space-x-3 text-gray-700">
+                        <span class="text-green-500 font-bold">✓</span>
+                        <span>PVC ID</span>
+                    </div>
+                    <div class="flex items-center space-x-3 text-gray-700">
+                        <span class="text-green-500 font-bold">✓</span>
+                        <span>Flyers</span>
+                    </div>
+                    <div class="flex items-center space-x-3 text-gray-700">
+                        <span class="text-green-500 font-bold">✓</span>
+                        <span>Party Favors</span>
+                    </div>
+                    <div class="flex items-center space-x-3 text-gray-700">
+                        <span class="text-green-500 font-bold">✓</span>
+                        <span>Personalized Bags</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-20 px-4 bg-gray-50">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Our Work Gallery</h2>
+                <p class="text-xl text-gray-600">See the quality and creativity in our custom printing projects</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="service-card bg-white rounded-2xl overflow-hidden shadow-lg">
+                    <img src="https://ik.imagekit.io/dxnelsw4w/sample1.jpg.png?updatedAt=" alt="Custom T-Shirts" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Custom T-Shirts</h3>
+                        <p class="text-gray-600">High-quality sublimation printing on premium fabrics</p>
+                    </div>
+                </div>
+
+                <div class="service-card bg-white rounded-2xl overflow-hidden shadow-lg">
+                    <img src="https://ik.imagekit.io/dxnelsw4w/sample3.jpg.png?updatedAt=" alt="Custom Mugs" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Custom Mugs</h3>
+                        <p class="text-gray-600">Personalized mugs perfect for gifts and promotions</p>
+                    </div>
+                </div>
+
+                <div class="service-card bg-white rounded-2xl overflow-hidden shadow-lg">
+                    <img src="https://ik.imagekit.io/dxnelsw4w/sample4.jpg.png?updatedAt=" alt="Custom Tumblers" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Custom Tumblers</h3>
+                        <p class="text-gray-600">Durable and stylish personalized drinkware</p>
+                    </div>
+                </div>
+
+                <div class="service-card bg-white rounded-2xl overflow-hidden shadow-lg">
+                    <img src="https://ik.imagekit.io/dxnelsw4w/9.png?updatedAt=" alt="Event Souvenirs" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Event Souvenirs</h3>
+                        <p class="text-gray-600">Memorable keepsakes for special occasions</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-4 gradient-bg">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-white mb-4">Get In Touch</h2>
+                <p class="text-xl text-blue-100">Ready to bring your ideas to life? Contact us today!</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 text-center">
+                <div class="bg-white bg-opacity-10 backdrop-blur-lg rounded-2xl p-8 text-white">
+                    <div class="text-4xl mb-4">📱</div>
+                    <h3 class="text-xl font-semibold mb-2">Phone</h3>
+                    <p class="text-blue-100">0953-118-3726</p>
+                </div>
+
+                <div class="bg-white bg-opacity-10 backdrop-blur-lg rounded-2xl p-8 text-white">
+                    <div class="text-4xl mb-4">📩</div>
+                    <h3 class="text-xl font-semibold mb-2">Email</h3>
+                    <p class="text-blue-100 text-sm">Ayumi.adsandprints@gmail.com</p>
+                </div>
+
+                <div class="bg-white bg-opacity-10 backdrop-blur-lg rounded-2xl p-8 text-white">
+                    <div class="text-4xl mb-4">📍</div>
+                    <h3 class="text-xl font-semibold mb-2">Location</h3>
+                    <p class="text-blue-100">National highway, Matain, Subic Zambales</p>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="tel:09531183726" class="bg-white text-blue-600 px-8 py-4 rounded-full font-semibold hover:bg-blue-50 transition-colors mr-4">
+                    Call Now
+                </a>
+                <a href="mailto:Ayumi.adsandprints@gmail.com" class="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-blue-600 transition-colors mr-4">
+                    Send Email
+                </a>
+                <a href="https://www.facebook.com/ayumiadsnprints.official" target="_blank" class="bg-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:bg-blue-700 transition-colors">
+                    📘 Facebook Page
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 px-4 bg-gray-900 text-center">
+        <div class="max-w-4xl mx-auto">
+            <div class="flex items-center justify-center space-x-3 mb-4">
+                <img src="https://ik.imagekit.io/dxnelsw4w/your-logo.png.png?updatedAt=" alt="Ayumi Ads & Prints Logo" class="h-8 object-contain">
+                <span class="text-white font-semibold">Ayumi Ads & Prints</span>
+            </div>
+            <p class="text-gray-400">© 2024 Ayumi Ads & Prints. Quality printing solutions for all your needs.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Mobile menu toggle
+        function toggleMenu() {
+            // Simple mobile menu implementation
+            alert('Mobile menu - Contact us at 0953-118-3726');
+        }
+
+        // Add scroll animations
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.backgroundColor = 'rgba(0, 137, 222, 0.95)';
+                header.style.backdropFilter = 'blur(10px)';
+            } else {
+                header.style.backgroundColor = 'transparent';
+                header.style.backdropFilter = 'none';
+            }
+        });
+
+        // Animate elements on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.service-card').forEach(card => {
+            observer.observe(card);
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'960fcb7913e64dc8',t:'MTc1MjgxODgwNC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
